@@ -31,10 +31,22 @@ console.log(65 % 55);*/
 
 //String Concatenation
 
-console.log('Hello' + 'World');
-console.log('Hello' + ' ' + 'World');
+/*console.log('Hello' + 'World');
+console.log('Hello' + ' ' + 'World');*/
 
 //String length
 
-console.log('Hello'.length);
-console.log('My name is Anthony Gonsalvis'.length);
+/*console.log('Hello'.length);
+console.log('My name is Anthony Gonsalvis'.length);*/
+
+//String Methods
+console.log('Hello'.toUpperCase());
+console.log('VAnaKKAm'.toLowerCase());
+console.log('Super Ranga'.startsWith('S'));
+console.log('Super Ranga'.startsWith('R'));
+
+console.log(Math.random());
+console.log(Math.floor(46.7));
+console.log(Math.ceil(46.7));
+console.log(Number.isInteger(75));
+console.log(Number.isInteger(75.33));
