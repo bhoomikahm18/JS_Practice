@@ -109,7 +109,42 @@ function areaOftriangle(b, h) {
     console.log('Area of Triangle is: ' + area);
 }
 
-sayName('Kishan');
-sayNamaste('Seema');
+sayHello('Kishan');
+sayName('Seema');
 areaOfRectangle(20, 10);
 areaOftriangle(20, 30);
+
+//DEFAULT ARGUMENTS
+//While declaring a function parameter, we can declare its default values.
+//In case the user forgets to pass the arguments, default will be considered for processing.
+
+function SayNamaste(myName='Random Person') {
+    console.log(`Namaste ${myName}! Welcome Home!`);
+}
+function areaOfRectangle(length, breath) {
+    let area = length * breath;
+    console.log(`Area of the rectangle is: ${area}`);
+}
+function areaOfTriangle(b=5, h=5) {
+    let area = 0.5 * b * h;
+    console.log('Area of Triangle is: ' + area);
+}
+
+SayNamaste();
+areaOfRectangle();
+areaOfTriangle();
+
+//RETURN STATEMENT
+function areaOfRectangle(length=10, breath=10) {
+    let area = length * breath;
+    console.log(`Area of the Rectangle is: ${area}`);
+}
+function areaOfTriangle(b, h) {
+    let area = 0.5 * b * h;
+    return area;
+}
+
+areaOfRectangle(15, 20);
+
+var triangleArea = areaOfTriangle(10, 15);
+console.log(triangleArea);
