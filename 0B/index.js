@@ -55,17 +55,61 @@ let condition = false;
 let position = 'Second Places';
 
 switch (position) {
-    case 'First Place': 
+    case 'First Place':
         console.log("You will get Gold Medal");
         break;
     case 'Second Place':
-        console.log("You will get silver Medal");    
+        console.log("You will get silver Medal");
         break;
     case 'Third place':
         console.log("You will get Bronze Medal");
         break;
-    
+
     default:
         console.log("Baba ji ka thullu");
         break;
 }
+
+//Functions in JS
+//Functions are block of code with a name (identifier), which when invoked performs certain set of operation.
+//A function can have various inputs & it will return one output.
+
+function sayHello() {
+    console.log("Hello Everyone");
+}
+
+function remaindMe() {
+    console.log("Water the plants");
+}
+
+sayHello();
+sayHello();
+sayHello();
+
+remaindMe();
+remaindMe();
+
+//Parameters and Arguments
+//Inputs defined at start of the function is known as PARAMETERS.
+//Inputs values we pass while we invoke the function are known as ARGUMENTS.
+
+
+function sayHello(myNames) {
+    console.log("Hello Mr. " + myNames + "! How are you?");
+}
+function sayName(myNames) {
+    console.log(`Namaste ${myNames}! Welcome Home`);
+}
+function areaOfRectangle(length, breath) {
+    let area = length * breath;
+    console.log(`Area of the rectangle is ${area}`);
+}
+function areaOftriangle(b, h) {
+    let area = 0.5 * b * h;
+    console.log('Area of Triangle is: ' + area);
+}
+
+sayName('Kishan');
+sayNamaste('Seema');
+areaOfRectangle(20, 10);
+areaOftriangle(20, 30);
