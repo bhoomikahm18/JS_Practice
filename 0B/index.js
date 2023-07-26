@@ -184,6 +184,23 @@ var triangleArea = function (b, h) {
 }
 var area = triangleArea;
 
-triangleArea = null;
+// triangleArea = null;
+
 console.log(`Using 'area' variable: ${area(5,7)}`);
 console.log(`Using 'triangleArea' variable: ${triangleArea(5,7)}`);
+
+//Arrow Head Functions
+var triangleArea = (b, h) => {
+    let area  = 0.5 * b * h;
+    return area;
+}
+
+var sayHello = () => {
+    console.log("Hello Everyone");
+}
+var SayNamaste = myName => {
+    console.log(`Namaste ${myName}! Welcome Home!`);
+}
+console.log(`Area of the triangle is: ${triangleArea(5, 8)}`);
+sayHello();
+SayNamaste("Seema");
