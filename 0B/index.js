@@ -20,10 +20,22 @@ else {
 //Any other number is considered as TRUE.
 //Any undefined or null or NaN(not a number) will be considered as FALSE.
 
-let flag = '';
+let flag = null;
 
 if (flag) {
     console.log("Flag is Truthy");
 } else {
     console.log("Flag is Falsy");
 }
+
+//Short-Circuit Assignment
+let myName = 'Bhoomi';
+let person = myName || 'Nobody';
+
+console.log(`You know, ${person} is a Good girl`);
+
+let myNameIs = '';
+let persons = myName || 'Nobody';
+
+console.log(`You know, ${persons} is a Good girl`);
+
