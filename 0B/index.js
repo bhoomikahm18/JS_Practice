@@ -162,3 +162,28 @@ console.log(`Cost of 25 mangos is: Rs.${costOfMango} only/-`);
 
 console.log("Cost of 35 mangoes is: Rs." + mangoCost(35) + " only/-");
 console.log(`Cost of 45 mangoes is: Rs.${mangoCost(45)} only/-`);
+
+//Function Expression (Anonymous functions)
+//As we don't name anything it is called: Anonymous function.
+//With this we can transfer the function object to some-other variable & start invoking the function by that name.
+function areaOfTriangle(b, h) {
+    let area = 0.5 * b * h;
+    return area;
+}
+var triangleArea = function (b, h){
+    let area = 0.5 * b * h
+    return area;
+}
+console.log(`Area using Function: ${areaOfTriangle(10, 15)}`);
+console.log(`Area using Function Expression: ${triangleArea(5, 7)}`);
+
+//Transferring Function Expression
+var triangleArea = function (b, h) {
+    let area = 0.5 * b * h;
+    return area;
+}
+var area = triangleArea;
+
+triangleArea = null;
+console.log(`Using 'area' variable: ${area(5,7)}`);
+console.log(`Using 'triangleArea' variable: ${triangleArea(5,7)}`);
