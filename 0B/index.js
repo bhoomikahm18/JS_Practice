@@ -148,3 +148,17 @@ areaOfRectangle(15, 20);
 
 var triangleArea = areaOfTriangle(10, 15);
 console.log(triangleArea);
+
+//Helper Functions
+function mangoWieght(count) {
+    return count * 0.25;
+}
+function mangoCost(count) {
+    return mangoWieght(count) * 175;
+}
+
+var costOfMango = mangoCost(25); 
+console.log(`Cost of 25 mangos is: Rs.${costOfMango} only/-`);
+
+console.log("Cost of 35 mangoes is: Rs." + mangoCost(35) + " only/-");
+console.log(`Cost of 45 mangoes is: Rs.${mangoCost(45)} only/-`);
