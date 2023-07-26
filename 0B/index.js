@@ -35,7 +35,37 @@ let person = myName || 'Nobody';
 console.log(`You know, ${person} is a Good girl`);
 
 let myNameIs = '';
-let persons = myName || 'Nobody';
+let persons = myNameIs || 'Nobody';
 
 console.log(`You know, ${persons} is a Good girl`);
 
+//Ternary Operator
+//Ternary operator checks the condition at first.
+//If the condition results is true: It executes the middle(left) statement.
+// If the condition results is false: It executes the last(right) statement.
+//Eg: 
+var c = (55 > 10) ? 55 : 65;
+console.log(c);
+
+let condition = false;
+
+(condition) ? (console.log("First Statement")) : (console.log("Second Statement"));
+
+//Switch Case
+let position = 'Second Places';
+
+switch (position) {
+    case 'First Place': 
+        console.log("You will get Gold Medal");
+        break;
+    case 'Second Place':
+        console.log("You will get silver Medal");    
+        break;
+    case 'Third place':
+        console.log("You will get Bronze Medal");
+        break;
+    
+    default:
+        console.log("Baba ji ka thullu");
+        break;
+}
