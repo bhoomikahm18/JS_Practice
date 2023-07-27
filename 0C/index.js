@@ -83,3 +83,18 @@ console.log("New Members are: " + nato.slice(8));
 console.log(nato.slice(4, 6));
 
 console.log(nato.indexOf('Germany'));
+
+//Loops in JavaScript
+for (let i = 0; i < 5; i++){
+    console.log(i);
+}
+
+for (let i = 7; i >= 0; i--){
+    console.log(i);
+}
+
+let nato1 = ['USA','UK','Germany','Canada','France','Itay','Turkey'];
+
+for (let i = 0; i < nato1.length; i++){
+    console.log(nato1[i]);
+}
