@@ -9,3 +9,12 @@ southAsia [0] = 'India';
 southAsia [1] = 'Pakistan';
 southAsia [2] = 'Bangladesh';
 console.log(southAsia);
+
+//Accessing Array
+let southEastAsia = ['India','Pakistan','Bangladesh','Buthan','Burma','Nepal','Loas','Combodia','Vietrem'];
+southEastAsia [4] = 'Mayanmar';
+
+let topEconomy = southEastAsia[0];
+console.log(`Richest Economy in south Asia is ${topEconomy}!!`);
+
+console.log(`If we try to access an array out of index we get : ${southEastAsia[12]}`);
