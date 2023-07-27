@@ -39,3 +39,29 @@ let southEastAsia = ['India','Pakistan','Bangladesh','Buthan','Burma','Nepal'];
 
 console.log(southAsia.length);
 console.log(southEastAsia.length);
+
+//PUSh OR POP
+let nato = ['USA','UK','Germany','Canada','France','Italy','Turkey'];
+
+nato.push('Romania','Greece','Latvia','Lithuania','Estonia');
+console.log(nato);
+/*output: [
+  'USA',       'UK',
+  'Germany',   'Canada',
+  'France',    'Italy',
+  'Turkey',    'Romania',
+  'Greece',    'Latvia',
+  'Lithuania', 'Estonia'
+]*/
+
+nato.pop();
+nato.pop();
+nato.pop();
+console.log(nato);
+/*output: [
+  'USA',     'UK',
+  'Germany', 'Canada',
+  'France',  'Italy',
+  'Turkey',  'Romania',
+  'Greece'
+]*/
