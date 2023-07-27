@@ -1,7 +1,7 @@
 //Conditions and Functions
 
-let flag = true;
-if (flag) {
+let flags = true;
+if (flags) {
     console.log("Salute, Salute, Salute");
 }
 
@@ -204,3 +204,28 @@ var SayNamaste = myName => {
 console.log(`Area of the triangle is: ${triangleArea(5, 8)}`);
 sayHello();
 SayNamaste("Seema");
+
+
+var triangleArea = (b, h) => {
+    let area  = 0.5 * b * h;
+    return area;
+}
+//Can be return as
+
+var triangleArea = (b, h) => 0.5 * b * h;
+
+//SCOPE
+//{...} demarcates scope in javascript.
+//Variables created inside a method or a if, else if block, or the parameters inside a function (created using 'let' keyword) live & die after the scope ends.
+//Global scope are variables created outside any scope, can be accessible till the end of the program.
+//Local scope are variables created inside those above mentioned blocks.
+for (var i = 1; i <= 5; i++) {
+    console.log("Hello World");
+}
+console.log(i);
+
+for (let j = 1; j <= 5; j++) {
+    console.log("Inside the for");
+}
+
+console.log(j); //not accessiable outside
