@@ -96,5 +96,5 @@ for (let i = 7; i >= 0; i--){
 let nato1 = ['USA','UK','Germany','Canada','France','Itay','Turkey'];
 
 for (let i = 0; i < nato1.length; i++){
-    console.log(nato1[i]);
+    console.log(`Long Live ${nato1[i]} !!`);
 }
