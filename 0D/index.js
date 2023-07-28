@@ -153,10 +153,18 @@ const logic = function (item) {
 const num = mixedArray.filter(logic);
 console.log(num);*/
 
-const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
+/*const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
 
 const logic = function (item) {
     return(typeof item === 'number') ? true : false;
 }
 const num = mixedArray.filter(logic);
+console.log(num);*/
+
+//Mentos Zindagi
+const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
+
+const num = mixedArray.filter(function (item) {
+    return(typeof item === 'number') ? true : false;
+});
 console.log(num);
