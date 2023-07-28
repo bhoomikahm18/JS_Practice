@@ -71,13 +71,25 @@ fruitSalad.forEach(itrFruit);*/
 
 //Mentos Zindagi
 
+/*const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
+
+//let itrFruit = function(fruit){
+    console.log(`10 gms of ${fruit}`);
+}
+
+fruitSalad.forEach(function(fruit){
+    console.log(`10 gms of ${fruit}`);
+});*/
+
+//Mentos Zindagi with Arrow Function
+
 const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
 
 /*let itrFruit = function(fruit){
     console.log(`10 gms of ${fruit}`);
 }*/
 
-fruitSalad.forEach(function(fruit){
+fruitSalad.forEach((fruit) => {
     console.log(`10 gms of ${fruit}`);
 });
 
