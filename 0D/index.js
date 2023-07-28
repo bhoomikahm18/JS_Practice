@@ -203,3 +203,12 @@ console.log(fruits.findIndex(fruit => fruit === 'graps'));
 });*/
 
 console.log(fruits.findIndex(fruit =>  fruit[0] === 'd'));
+
+//sort method
+const fruit1 = ['mango','banana','apple','kiwi','orange'];
+/*fruit1.sort();*/
+console.log(fruit1.sort());
+
+const number1 = [1,3,5,7,9,2,4,6,8];
+/*number1.sort();*/
+console.log(number1.sort());
