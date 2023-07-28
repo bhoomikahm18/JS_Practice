@@ -229,7 +229,8 @@ console.log(n);
 console.log(n1);
 console.log(n3);
 
-//Some
+//Some method 
+//example-1
 const mixedArray1 = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
 
 const num1 = mixedArray1.some( (item) => {
