@@ -141,7 +141,7 @@ console.log(squares);
 //.filter() returns an array of element after filtering out certain elements from the original array.
 //The callback function(logic method) for the .filter() method should return true or false.
 
-const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
+/*const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
 
 const logic = function (item) {
     if (typeof item === 'number') {
@@ -149,6 +149,14 @@ const logic = function (item) {
     } else {
         return false;
     }
+}
+const num = mixedArray.filter(logic);
+console.log(num);*/
+
+const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
+
+const logic = function (item) {
+    return(typeof item === 'number') ? true : false;
 }
 const num = mixedArray.filter(logic);
 console.log(num);
