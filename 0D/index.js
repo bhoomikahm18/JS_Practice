@@ -179,5 +179,27 @@ const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
     return(typeof item === 'number') ? true : false;
 });*/
 const num = mixedArray.filter( item => (typeof item === 'number') ? true : false);
+
 console.log(num);
 
+//Find Index Method
+//findIndex() method retrieves the index of first element of the array which matches with the true condition in the logic.
+
+let fruits = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+
+/*let fruitNum = fruits.findIndex((fruit) => {
+    return fruit === 'banana';
+});*/
+/*let fruitNum = fruits.findIndex(fruit => {
+    return fruit === 'banana';
+});*/
+console.log(fruits.findIndex(fruit => fruit === 'graps'));
+
+/*let startWithD = fruits.findIndex((fruit) => {
+    return fruit[0] === 'd';
+});*/
+/*let startWithD = fruits.findIndex(fruit => {
+    return fruit[0] === 'd';
+});*/
+
+console.log(fruits.findIndex(fruit =>  fruit[0] === 'd'));
