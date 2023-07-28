@@ -23,11 +23,11 @@ console.log(addMethod.name);
 addTwoNumbers*/
 
 //Call Back Functions(Aam Zindagi)
-const add = (x, y) => {
+const adds = (x, y) => {
     console.log(`Sum of Two Numbers: ${x, y}`);
 }
 
-add(5, 6);
+adds(5, 6);
 
 /*const add = function(x, y) {
     console.log(`Sum of Two Numbers: ${x, y}`);
@@ -43,3 +43,15 @@ const add = (x, y) => {
     console.log(`Sum of Two Numbers: ${x + y}`);
 }
 sum(add);
+
+//Aonther way
+
+const sumOf = (param, a, b) => {
+    param(a, b);
+    console.log(`Finished adding two numbers`);
+}
+
+const add2 = (x, y) => {
+    console.log(`Sum of Two Numbers: ${x + y}`);
+}
+sumOf(add2, 10, 15);
