@@ -83,7 +83,7 @@ fruitSalad.forEach(function(fruit){
 
 //Mentos Zindagi with Arrow Function
 
-const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
+const fruitSalad = ['Apple', 'Pineapple', 'Banana', 'Orange', 'Kiwi', 'Custard'];
 
 /*let itrFruit = function(fruit){
     console.log(`10 gms of ${fruit}`);
@@ -101,7 +101,7 @@ fruitSalad.forEach(fruit => {
 //map() works in the same way, but it returns a new array with added logic.
 
 //Aam Zindagi
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+/*const numbers = [1, 2, 3, 4, 5, 6, 7];
 
 const logic = function (num) {
     return num * num;
@@ -109,6 +109,46 @@ const logic = function (num) {
 
 const squares = numbers.map(logic);
 
+console.log(squares);*/
+
+//Mentos Zindagi
+/*const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+/*const logic = function (num) {
+    return num * num;
+}
+
+const squares = numbers.map(function (num) {
+    return num * num;
+});
+
+console.log(squares);*/
+//Mentos Zindagi with Arrow
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+/*const squares = numbers.map((num) => {
+    return num * num;
+});*/
+/*const squares = numbers.map(num => {
+    return num * num;
+});*/
+const squares = numbers.map(num => num * num);
+
 console.log(squares);
 
+//FILTER METHOD
+//Filter method returns a new array after filtering the element from existing array.
+//.filter() returns an array of element after filtering out certain elements from the original array.
+//The callback function(logic method) for the .filter() method should return true or false.
 
+const mixedArray = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
+
+const logic = function (item) {
+    if (typeof item === 'number') {
+        return true;
+    } else {
+        return false;
+    }
+}
+const num = mixedArray.filter(logic);
+console.log(num);
