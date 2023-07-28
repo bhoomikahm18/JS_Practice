@@ -61,10 +61,23 @@ sumOf(add2, 10, 15);
 //Common functions are:forEach(), map(), filter().
 
 //Aam Zindagi
-const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
+/*const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
 
 let itrFruit = function(fruit){
     console.log(`10 gms of ${fruit}`);
 }
 
-fruitSalad.forEach(itrFruit);
+fruitSalad.forEach(itrFruit);*/
+
+//Mentos Zindagi
+
+const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
+
+/*let itrFruit = function(fruit){
+    console.log(`10 gms of ${fruit}`);
+}*/
+
+fruitSalad.forEach(function(fruit){
+    console.log(`10 gms of ${fruit}`);
+});
+
