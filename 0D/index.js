@@ -212,3 +212,45 @@ console.log(fruit1.sort());
 const number1 = [1,3,5,7,9,2,4,6,8];
 /*number1.sort();*/
 console.log(number1.sort());
+
+
+//Reduce
+const number = [2, 3, 4];
+
+const n = number.reduce((a, b) => {
+    return a + b;
+});
+const n1 = number.reduce(num => {
+    return 1 + num;
+});
+const n3 = number.reduce(a => 3 + a );
+
+console.log(n);
+console.log(n1);
+console.log(n3);
+
+//Some
+const mixedArray1 = ['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
+
+const num1 = mixedArray1.some( (item) => {
+    return(typeof item === 'number') ;
+});
+const num2 = mixedArray1.some( item => {
+    return(item === 'number') ;
+});
+const num3 = mixedArray1.some( item => (item === 'number') );
+
+console.log(num1);
+console.log(num2);
+console.log(num3);
+
+//example-2
+let fruits1 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+
+/*let fruitNum = fruits.some((fruit) => {
+    return fruit === 'banana';
+});*/
+/*let fruitNum = fruits.some(fruit => {
+    return fruit === 'banana';
+});*/
+console.log(fruits1.some(fruit => fruit === 'graps'));
