@@ -55,3 +55,16 @@ const add2 = (x, y) => {
     console.log(`Sum of Two Numbers: ${x + y}`);
 }
 sumOf(add2, 10, 15);
+
+//Iterators
+//Iterators are methods used on arrays to work on the same.
+//Common functions are:forEach(), map(), filter().
+
+//Aam Zindagi
+const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
+
+let itrFruit = function(fruit){
+    console.log(`10 gms of ${fruit}`);
+}
+
+fruitSalad.forEach(itrFruit);
