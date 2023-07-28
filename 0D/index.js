@@ -89,7 +89,26 @@ const fruitSalad = ['Apple','Pineapple','Banana','Orange','Kiwi','Custard'];
     console.log(`10 gms of ${fruit}`);
 }*/
 
-fruitSalad.forEach((fruit) => {
+/*fruitSalad.forEach((fruit) => {
+    console.log(`10 gms of ${fruit}`);
+});*/
+fruitSalad.forEach(fruit => {
     console.log(`10 gms of ${fruit}`);
 });
+
+//MAP FUNCTION
+//forEach() pops out an element of an array & it operates on it.
+//map() works in the same way, but it returns a new array with added logic.
+
+//Aam Zindagi
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+const logic = function (num) {
+    return num * num;
+}
+
+const squares = numbers.map(logic);
+
+console.log(squares);
+
 
