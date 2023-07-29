@@ -99,7 +99,7 @@ for (let key in baby) {
 }
 
 //Hybrid Objects(Advanced Objects)
-let dog = {
+let dog1 = {
     breed: 'Golden Retrevier',
     color: 'Orange',
     weight: 18,
@@ -112,5 +112,24 @@ let dog = {
     }
 }
 
-dog.hungry();
-console.log(dog.getInfo());
+dog1.hungry();
+console.log(dog1.getInfo());
+
+//Wrong way of Representing Methods
+//arrow function is invalid here
+//Any Form of Function expresion becomes invalid for the object and its members cannot be accessed using 'this' keyword
+let dog2 = {
+    breed: 'Golden Retrevier',
+    color: 'Orange',
+    weight: 18,
+
+    hungry: () => {
+        console.log("Wagging the tail");
+    },
+    getInfo: () => {
+        return `My dog is a ${this.breed}, is ${this.color} in color & weight ${this.weight} kilos`
+    }
+}
+
+dog2.hungry();
+console.log(dog2.getInfo());
