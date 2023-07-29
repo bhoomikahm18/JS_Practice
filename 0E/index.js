@@ -39,3 +39,46 @@ delete baby.sheep;
 delete baby['baby duck'];
 
 console.log(baby);
+
+//Function Expressions as Properties
+const actions = {
+    sayHello: function () {
+        console.log("Hello Everyone!");
+    },
+    sayNamaste: function (person) {
+        console.log(`Namaste ${person}, How are you?`);
+    },
+    add: function (num1, num2) {
+        return num1 + num2;
+    }
+}
+
+actions.sayHello();
+actions.sayNamaste('Seema');
+console.log(`Sum of two numbers is : ${actions.add(10, 15)}`);
+
+//Pass by Reference
+//We can pass an object's reference as an argument of a method call(function call).
+//This process is known as Pass by Reference
+
+let profile = {
+    fullName: 'Bajaji KR',
+    status: 'Single',
+    children: 0,
+    parents: ['Rajeevalochana KV', 'Padma Rekha V'],
+    salaried: true
+}
+
+const modifyName = function(obj, changedName) {
+    obj.fullName = changedName;
+}
+
+const addChild = (obj) => {
+    obj.children += 1;
+}
+
+modifyName(profile, 'BKR');
+console.log(profile);
+
+addChild();
+console.log(profile);
