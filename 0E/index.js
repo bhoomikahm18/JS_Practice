@@ -133,3 +133,25 @@ let dog2 = {
 
 dog2.hungry();
 console.log(dog2.getInfo());
+
+//Get Methods
+let dog3 = {
+    _breed: 'Golden Retrevier',
+    _weight: 18,
+    color: 'Orange',
+    get breed(){
+        return this._breed
+    },
+    get weight() {
+        return this._weight
+    },
+    hungry() {
+        console.log("Wagging the tail");
+    },
+    getInfo() {
+        return `My dog is a ${this._breed}, is ${this.color} in color & weight ${this.weight} kilos`
+    }
+}
+
+dog3.hungry();
+console.log(dog3.getInfo());
