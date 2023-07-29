@@ -80,5 +80,37 @@ const addChild = (obj) => {
 modifyName(profile, 'BKR');
 console.log(profile);
 
-addChild();
+addChild(profile);
 console.log(profile);
+
+//Iterate using for...in
+let baby = {
+    cat : 'kitten',
+    dog : 'puppy',
+    kangaroo : 'zoey',
+    'horse baby' : 'fawn',
+    'baby duck' : 'duckling',
+    'lion' : 'cub',
+    sheep :'lamb'
+}
+
+for (let key in baby) {
+    console.log(`Child of ${key} is called: ${baby[key]}`);
+}
+
+//Hybrid Objects(Advanced Objects)
+let dog = {
+    breed: 'Golden Retrevier',
+    color: 'Orange',
+    weight: 18,
+
+    hungry() {
+        console.log("Wagging the tail");
+    },
+    getInfo() {
+        return `My dog is a ${this.breed}, is ${this.color} in color & weight ${this.weight} kilos`
+    }
+}
+
+dog.hungry();
+console.log(dog.getInfo());
