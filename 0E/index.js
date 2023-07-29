@@ -159,3 +159,43 @@ console.log(dog3.color);
 dog3.hungry();
 console.log(dog3.getInfo());
 
+//Set Methods
+let dog4 = {
+    _breed: 'Golden Retrevier',
+    _weight: 18,
+    color: 'Orange',
+    get breed(){
+        return this._breed
+    },
+    get weight() {
+        return this._weight
+    },
+    set breed(newBreed) {
+        if (typeof newBreed == 'string') {
+            this._breed = newBreed;
+        }
+    },
+    set weight(num){
+        if (typeof num == 'number' && 0) {
+            this._weight = num;
+        }
+        else{
+            console.log("Please Enter a Valid Number Above 0");
+        }
+    }
+}
+
+console.log(`Dog breed Before: ${dog4.breed}`);
+console.log(`Dog Weight Before: ${dog4.weight}`);
+console.log(`Dog Color Before: ${dog4.color}`);
+
+dog4.breed = 'German Sheperd';
+dog4.weight = 23;
+dog4.color = 'Blackish Brown';
+
+console.log(`Dog breed After: ${dog4.breed}`);
+console.log(`Dog Weight After: ${dog4.weight}`);
+console.log(`Dog Color After: ${dog4.color}`);
+
+
+
