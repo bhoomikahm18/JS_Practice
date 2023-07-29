@@ -266,8 +266,14 @@ const dogFactory1 = (breed, weight, color, violent) => {
     }
 }
 
-let d3 = dogFactory('Labrador',18,'Orange',false);
+let d3 = dogFactory1('Labrador',18,'Orange',false);
 d3.showInfo();
 
-let d4 = dogFactory('German Sheaperd',22,'Black',true);
+let d4 = dogFactory1('German Sheaperd',22,'Black',true);
 d4.showInfo();
+
+//Built in Object Methods
+let d5 = dogFactory1('Labrador',18,'Orange',false);
+
+const dogKeys = Object.keyss(d5);
+console.log(dogKeys);
