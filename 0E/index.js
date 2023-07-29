@@ -274,9 +274,15 @@ d4.showInfo();
 
 //Built in Object Methods
 let d5 = dogFactory1('Labrador',18,'Orange',false);
+// console.log(d5);
 
 const dogKeys = Object.keys(d5);
 console.log(dogKeys);
 
-const dogEntries = Object.entries(d5);
-console.log(dogEntries);
+// const dogEntries = Object.entries(d5);
+// console.log(dogEntries);
+
+const modifiedDog = Object.assign({tail: 'Long & Furry', response_time: 2}, d1);
+
+const modEnt = Object.entries(modifiedDog);
+console.log(modEnt);
