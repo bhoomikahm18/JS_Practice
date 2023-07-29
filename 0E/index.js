@@ -220,3 +220,54 @@ d1.showInfo();
 
 let d2 = dogFactory('German Sheaperd',22,'Black',true);
 d2.showInfo();
+
+//Using Setter and Getter On Factory Object
+const dogFactory1 = (breed, weight, color, violent) => {
+    return {
+        _breed: breed,
+        _weight: weight,
+        _color: color,
+        _violet: violent,
+        
+        get breed(){
+            return this._breed;
+        },
+        get weight() {
+            return this._weight;
+        },
+        get color(){
+            return this._color;
+        },
+        get violent(){
+            return this._violet;
+        },
+        set breed(br) {
+            if (typeof newBreed === 'string') {
+                this._breed = br;
+            }
+        },
+        set weight(wei){
+            (typeof num === 'number' && wei > 0) ? this._weight = wei : console.log('Please enter the valid number');
+        },
+        set color(col){
+            if(typeof col === 'string') this._color = col;
+        },
+        set violent (vio){
+            (typeof vio === 'boolean') ? this._violet = vio : console.log("Enter a valid Boolean true or false");
+        },
+
+        showInfo() {
+            console.log(`My Dog is a ${this._breed},
+            whose color is ${this._color},
+            & it weighs ${this._weight}kilos`);
+
+            this._violet ? console.log("It is Ferocius \n") : console.log("It is Sweet \n");
+        }
+    }
+}
+
+let d3 = dogFactory('Labrador',18,'Orange',false);
+d3.showInfo();
+
+let d4 = dogFactory('German Sheaperd',22,'Black',true);
+d4.showInfo();
