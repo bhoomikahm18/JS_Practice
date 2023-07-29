@@ -275,5 +275,8 @@ d4.showInfo();
 //Built in Object Methods
 let d5 = dogFactory1('Labrador',18,'Orange',false);
 
-const dogKeys = Object.keyss(d5);
+const dogKeys = Object.keys(d5);
 console.log(dogKeys);
+
+const dogEntries = Object.entries(d5);
+console.log(dogEntries);
