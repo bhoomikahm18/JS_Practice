@@ -282,7 +282,23 @@ console.log(dogKeys);
 // const dogEntries = Object.entries(d5);
 // console.log(dogEntries);
 
-const modifiedDog = Object.assign({tail: 'Long & Furry', response_time: 2}, d1);
+const modifiedDog = Object.assign({tail: 'Long & Furry', response_time: 2}, d5);
 
 const modEnt = Object.entries(modifiedDog);
 console.log(modEnt);
+
+//Spread Operator
+const profile1 = {
+    firstName: 'Bhoomika',
+    lastName: 'HM'
+};
+const address = {
+    country : 'India',
+    city: 'CRP'
+};
+const user = {
+    ...profile1,
+    gender: 'Female',
+    ...address
+};
+console.log(user);
