@@ -197,5 +197,26 @@ console.log(`Dog breed After: ${dog4.breed}`);
 console.log(`Dog Weight After: ${dog4.weight}`);
 console.log(`Dog Color After: ${dog4.color}`);
 
+//Factory
+const dogFactory = (breed, weight, color, violent) => {
+    return {
+        _breed: breed,
+        _weight: weight,
+        _color: color,
+        _violet: violent,
 
+        showInfo() {
+            console.log(`My Dog is a ${this._breed},
+            whose color is ${this._color},
+            & it weighs ${this._weight}kilos`);
 
+            this._violet ? console.log("It is Ferocius \n") : console.log("It is Sweet \n");
+        }
+    }
+}
+
+let d1 = dogFactory('Labrador',18,'Orange',false);
+d1.showInfo();
+
+let d2 = dogFactory('German Sheaperd',22,'Black',true);
+d2.showInfo();
