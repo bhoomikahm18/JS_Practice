@@ -153,5 +153,9 @@ let dog3 = {
     }
 }
 
+console.log(dog3.breed);
+console.log(dog3.weight);
+console.log(dog3.color);
 dog3.hungry();
 console.log(dog3.getInfo());
+
