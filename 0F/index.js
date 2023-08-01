@@ -151,3 +151,23 @@ console.log(f2);
 f1();
 f2();
 
+//Using call method
+
+let personOne7 = {
+    firstname: 'Balaji',
+    lastname: 'KR',
+
+}
+
+let personTwo7 = {
+    firstname: "Sachin",
+    lastname: "tendulkar",
+
+}
+let printName7 = function (hometown, state) {
+    console.log(`\n ${this.firstname} ${this.lastname} 
+    from ${hometown}, ${state}`);
+}
+
+printName7.bind(personOne7, 'Bengaluru', 'Karnataka').call();
+printName7.bind(personTwo7, 'Mumbai').call();
