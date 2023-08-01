@@ -94,5 +94,25 @@ let printName3 = function (hometown, state) {
     from ${hometown}, ${state}`);
 }
 
-printName3.call(personOne3, 'BEngaluru', 'Karnataka');
+printName3.call(personOne3, 'Bengaluru', 'Karnataka');
 printName3.call(personTwo4, 'Mumbai');
+
+//Using Apply Method
+let personOne5 = {
+    firstname: 'Balaji',
+    lastname: 'KR',
+
+}
+
+let personTwo5 = {
+    firstname: "Sachin",
+    lastname: "tendulkar",
+
+}
+let printName5 = function (hometown, state) {
+    console.log(`\n ${this.firstname} ${this.lastname} 
+    from ${hometown}, ${state}`);
+}
+let b;
+printName5.apply(personOne5, ['Bengaluru', 'Karnataka']);
+printName5.apply(personTwo5, [b, 'Maharastra']);
