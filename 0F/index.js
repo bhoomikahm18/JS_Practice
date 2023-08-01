@@ -56,3 +56,43 @@ let personTwo2 = {
 
 printName1(personOne1);
 printName1(personTwo2);
+
+let printName2 = function () {
+    console.log(this.firstname + " " + this.lastname);
+}
+
+let personOne2 = {
+    firstname: 'Balaji',
+    lastname: 'KR',
+
+}
+
+let personTwo3 = {
+    firstname: "Sachin",
+    lastname: "tendulkar",
+
+}
+
+printName2.call(personOne2);
+printName2.call(personTwo3);
+
+//Approach no.3
+
+let personOne3 = {
+    firstname: 'Balaji',
+    lastname: 'KR',
+
+}
+
+let personTwo4 = {
+    firstname: "Sachin",
+    lastname: "tendulkar",
+
+}
+let printName3 = function (hometown, state) {
+    console.log(`\n ${this.firstname} ${this.lastname} 
+    from ${hometown}, ${state}`);
+}
+
+printName3.call(personOne3, 'BEngaluru', 'Karnataka');
+printName3.call(personTwo4, 'Mumbai');
