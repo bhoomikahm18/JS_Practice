@@ -116,3 +116,7 @@ let printName5 = function (hometown, state) {
 let b;
 printName5.apply(personOne5, ['Bengaluru', 'Karnataka']);
 printName5.apply(personTwo5, [b, 'Maharastra']);
+
+//Call and Apply
+//call() mathod is using 'pass by reference' as we pass the object on which the method is to be called(with some additional parameters: comma separator)
+//apply() mathod is using 'pass by reference' as we pass the object on which the method is to be called(with some additional parameters: as an array)
