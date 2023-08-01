@@ -1,4 +1,4 @@
-let personOne = {
+/*let personOne = {
     firstname: 'Balaji',
     lastname: 'KR',
 
@@ -17,4 +17,22 @@ let personTwo = {
 }
 
 personOne.printName();
-personTwo.printName();
+personTwo.printName();*/
+
+//Function Borrowing
+let personOne = {
+    firstname: 'Balaji',
+    lastname: 'KR',
+
+    printName() {
+        console.log(this.firstname + " " + this.lastname);
+    }
+}
+
+let personTwo = {
+    firstname: "Sachin",
+    lastname: "tendulkar",
+
+}
+
+personOne.printName.call(personTwo);
