@@ -10,3 +10,4 @@ function clickMe() {
 }
 
 console.log(`Water Boiling Point is ${celsiusToFahrenheit(100)} Degree Fahrenheit`);
+// console.log(`Human Body temperature is ${fahrenheitToCesius(98.6)} Degree celsius`);
