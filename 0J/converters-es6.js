@@ -22,7 +22,7 @@ export const fahrenheitToCesius = function (fahrenheit) {
 };
 
 const milliToCenti = (millimeter) => {
-    return millimeter / 100;
+    return millimeter / 10;
 }
 
 const centiToMeter = (centimeter) => {
