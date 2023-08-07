@@ -88,7 +88,10 @@ const profiles = {
 */
 
 function goToHell(pros) {
-
+    setTimeout((objs) => {
+        let keys = Object.keys(objs);
+        console.log(keys);
+    }, 2000, pros)
 }
 
 goToHell(profiles);
