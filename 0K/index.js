@@ -1,4 +1,4 @@
-let balajiBath = function () {
+/*let balajiBath = function () {
     console.log('\nBalaji Woke Up');
     console.log('Balaji is Bathing');
     console.log('Balaji is Ready');
@@ -10,4 +10,20 @@ let kishanBath = function () {
 }
 
 kishanBath();
-balajiBath();
+balajiBath();*/
+
+//Mentos Zindagi
+
+let balajiBath = function () {
+    console.log('\nBalaji Woke Up');
+    console.log('Balaji is Bathing');
+    console.log('Balaji is Ready');
+}
+let kishanBath = function (signalHim) {
+    setTimeout(() => { console.log('\nKishan Woke Up') }, 2000);
+    setTimeout(() => { console.log('Kishan is Bathing') }, 3000);
+    setTimeout(() => { console.log('Kishan is Ready') }, 5000);
+}
+
+kishanBath();
+setTimeout(balajiBath, 7000);
