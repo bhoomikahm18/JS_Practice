@@ -134,3 +134,26 @@ const bringChocolates = function () {
 }
 
 bringChocolates();
+
+//True & false
+const bringChocolates1 = function () {
+    let didIBringTheChocolates = false; //stage-1
+
+    setTimeout(() => { console.log("Getting ready to go market") }, 2000);
+    setTimeout(() => { console.log("Booking a cab to the store") }, 4000);
+    setTimeout(() => { console.log("Selecting the chocolate") }, 6000);
+    setTimeout(() => { console.log("Making the payment") }, 8000);
+
+    setTimeout(() => { didIBringTheChocolates = true; }, 12000);
+
+    didIBringTheChocolates == true; //stage-2
+
+    if (didIBringTheChocolates == true) {
+        console.log(`Kishan says: Thank you appa!!`);
+    }
+    else {
+        console.log(`Kishan is Crying: I hate you!!`);
+    }
+}
+
+bringChocolates1();
