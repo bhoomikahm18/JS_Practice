@@ -210,3 +210,54 @@ function cryInACorner() {
 let iPromisesToBringChocolates = new Promise(tryToBringChocolates);
 
 iPromisesToBringChocolates.then(eatTheChocolates).catch(cryInACorner);
+
+
+const profiles1 = {
+    'balaji': {
+        fullname: 'Balaji KR',
+        age: 35,
+        married: true,
+        hobbies: ['Defence', 'Finance', 'Foreign Affairs']
+    },
+    'seema': {
+        fullname: 'Seema H',
+        age: 30,
+        married: true,
+        hobbies: ['Cooking', 'Painting', 'Art & Craft']
+    },
+    'kishan': {
+        fullname: 'Kishan KB',
+        age: 3,
+        married: false,
+        hobbies: ['football', 'video games']
+    },
+    'rajeev': {
+        fullname: 'Rajeevalochana KV',
+        age: 70,
+        married: true,
+        hobbies: ['Watching TV']
+    }
+}
+
+/*Requirements:
+-> Display keys of all profiles after 2 seconds.
+-> Display profile of 'kishan' after 3 sec(from one).
+-> Display kishan's age after 2 sec (from two).
+-> Display Kishan's Hobbies after 4sec (from three).
+*/
+
+let goToHell = new Promise(keysPromiseFunction);
+
+function keysPromiseFunction(resolve, reject) {
+    //callback function for promises
+}
+
+function displayKeys(keys) {
+    //callback function fro resolve
+}
+
+function error(msg) { 
+    //callback function for reject
+}
+
+goToHell.then(displayKeys).catch(error);
