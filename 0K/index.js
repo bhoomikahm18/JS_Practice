@@ -157,3 +157,56 @@ const bringChocolates1 = function () {
 }
 
 bringChocolates1();
+
+//Handling Promises
+/*-> Promises have a structured way to handle different conditions.
+-> Plain if/else conditions does not give us the ability to handle things in a structured way.
+-> If pomises carefully executed: resolve() method is executed.
+-> if promises have failed in executing: reject() method will be executed.
+
+-> To create a promises we write:
+let anypromise = new Promise(resolve, reject);
+
+-> To execute a promises we write;
+anypromise.then(resolve-fun).catch(reject-fun);
+*/
+
+const tryToBringChocolates = function (resolve, reject) {
+
+    let didIBringTheChocolates = false; //stage-1
+
+    setTimeout(() => { console.log("Getting ready to go market") }, 2000);
+    setTimeout(() => { console.log("Booking a cab to the store") }, 4000);
+    setTimeout(() => { console.log("Selecting the chocolate") }, 6000);
+    setTimeout(() => { console.log("Making the payment") }, 8000);
+
+    setTimeout(() => {
+        didIBringTheChocolates = true;
+
+        if (didIBringTheChocolates == true) {
+            resolve();
+        } else {
+            reject();
+        }
+    }, 12000);
+
+    didIBringTheChocolates == true; //stage-2
+
+    if (didIBringTheChocolates == true) {
+        console.log(`Kishan says: Thank you appa!!`);
+    }
+    else {
+        console.log(`Kishan is Crying: I hate you!!`);
+    }
+}
+
+function eatTheChocolates() {
+    console.log(`Kishan says: Thank you appa!!`);
+}
+function cryInACorner() {
+    console.log(`Kishan is crying: I hate you!!`);
+}
+
+let iPromisesToBringChocolates = new Promise(tryToBringChocolates);
+
+iPromisesToBringChocolates.then(eatTheChocolates).catch(cryInACorner);
