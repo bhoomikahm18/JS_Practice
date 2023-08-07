@@ -97,10 +97,13 @@ function goToHell(pros) {
 
             setTimeout((sub) => {
                 console.log(`Age of Kishan is: ${sub.age}`);
+
+                setTimeout((sub) => {
+                    console.log(`Hobbies of kishan are: ${sub.hobbies}`);
+                }, 4000, sub);
             }, 2000, objs[`kishan`]);
         }, 3000, 'kishan', objs);
     }, 2000, pros);
 }
 
 goToHell(profiles);
-
