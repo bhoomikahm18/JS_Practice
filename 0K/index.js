@@ -53,3 +53,42 @@ balajiBath();
 -> That is why: Callback function are a way to make sure certain code doesn't execute until other has already finished execution.
 -> In Asyncronous Programing Language like Javascript: Callback function are absolute necessity.*/
 
+const profiles = {
+    'balaji': {
+        fullname: 'Balaji KR',
+        age: 35,
+        married: true,
+        hobbies: ['Defence', 'Finance', 'Foreign Affairs']
+    },
+    'seema': {
+        fullname: 'Seema H',
+        age: 30,
+        married: true,
+        hobbies: ['Cooking', 'Painting', 'Art & Craft']
+    },
+    'kishan': {
+        fullname: 'Kishan KB',
+        age: 3,
+        married: false,
+        hobbies: ['football', 'video games']
+    },
+    'rajeev': {
+        fullname: 'Rajeevalochana KV',
+        age: 70,
+        married: true,
+        hobbies: ['Watching TV']
+    }
+}
+
+/*Requirements:
+-> Display keys of all profiles after 2 seconds.
+-> Display profile of 'kishan' after 3 sec(from one).
+-> Display kishan's age after 2 sec (from two).
+-> Display Kishan's Hobbies after 4sec (from three).
+*/
+
+function goToHell(pros) {
+
+}
+
+goToHell(profiles);
