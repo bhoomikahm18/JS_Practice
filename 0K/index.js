@@ -39,7 +39,17 @@ let kishanBath = function (signalHim) {
     setTimeout(() => { console.log('Kishan is Bathing') }, 3000);
     setTimeout(() => { console.log('Kishan is Ready') }, 5000);
 
-    setTimeout(signalHim, 7000);
 }
 
-kishanBath(balajiBath);
+kishanBath();
+balajiBath();
+// setTimeout(balajiBath, 7000);
+
+//Why Callback Function
+/*-> Javascript is an event driven language.
+-> Instead of waiting for a response from a pending event, before moving on, JS will keep executing other events.
+-> In the meantime js will keep a watch on previous pending events, and will execute the same at an appropriate time.
+
+-> That is why: Callback function are a way to make sure certain code doesn't execute until other has already finished execution.
+-> In Asyncronous Programing Language like Javascript: Callback function are absolute necessity.*/
+
