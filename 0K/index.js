@@ -250,14 +250,23 @@ let goToHell = new Promise(keysPromiseFunction);
 
 function keysPromiseFunction(resolve, reject) {
     //callback function for promises
+    setTimeout((objs) => {
+        let keys = Object.keys(objs);
+        (keys.length > 0) ?
+            resolve(keys):
+            reject(`Error while Parsing keys from Object`);
+    }, 2000, profiles1);
 }
 
 function displayKeys(keys) {
     //callback function fro resolve
+    console.log(keys);
 }
 
 function error(msg) { 
     //callback function for reject
+    console.log(msg);
 }
 
 goToHell.then(displayKeys).catch(error);
+
