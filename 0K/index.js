@@ -107,3 +107,30 @@ function goToHell(pros) {
 }
 
 goToHell(profiles);
+
+//Promises in JS
+/*-> Promises in JS are used to handle Asynchronous Operations.
+-> A Promises is an object that keep track about whether a certain event has happened already or not. 
+It also determines what will happen afetr the event.
+-> Promises has three stages: Pending, Completed & Rejected.
+*/
+
+const bringChocolates = function () {
+    let didIBringTheChocolates = false; //stage-1
+
+    console.log("Getting ready to go market");
+    console.log("Booking a cab to the store");
+    console.log("Selecting the chocolate");
+    console.log("Making the payment");
+
+    didIBringTheChocolates == true; //stage-2
+
+    if (didIBringTheChocolates == true) {
+        console.log(`Kishan says: Thank you appa!!`);
+    }
+    else {
+        console.log(`Kishan is Crying: I hate you!!`);
+    }
+}
+
+bringChocolates();
