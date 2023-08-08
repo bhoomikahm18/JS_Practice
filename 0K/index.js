@@ -340,7 +340,7 @@ function profilePromiseFunction(resolve, reject) {
         (objs.hasOwnProperty(key)) ?
             resolve({ key, objs }) :
             reject(`Object by name ${key} does not exist`)
-    }, 3000, 'kishan', profiles1);
+    }, 3000, 'kishan', profiles2);
 }
 function agePromiseFunction(resolve, reject) {
     setTimeout((obj) => {
@@ -388,3 +388,5 @@ goToHell.then(displayKeys)
     .then(displayAge)
     .then(displayHobbies)
     .catch(error);
+
+
