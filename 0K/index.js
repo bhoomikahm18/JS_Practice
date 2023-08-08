@@ -295,3 +295,96 @@ function error(msg) {
 
 goToHell.then(displayKeys).then(displayProfile).then(displayAge).catch(error);
 
+//Stage-5
+const profiles2 = {
+    'balaji': {
+        fullname: 'Balaji KR',
+        age: 35,
+        married: true,
+        hobbies: ['Defence', 'Finance', 'Foreign Affairs']
+    },
+    'seema': {
+        fullname: 'Seema H',
+        age: 30,
+        married: true,
+        hobbies: ['Cooking', 'Painting', 'Art & Craft']
+    },
+    'kishan': {
+        fullname: 'Kishan KB',
+        age: 3,
+        married: false,
+        hobbies: ['football', 'video games']
+    },
+    'rajeev': {
+        fullname: 'Rajeevalochana KV',
+        age: 70,
+        married: true,
+        hobbies: ['Watching TV']
+    }
+}
+
+let goToHell = new Promise(keysPromiseFunction);
+
+function keysPromiseFunction(resolve, reject) {
+    //callback function for promises
+    setTimeout((objs) => {
+        let keys = Object.keys(objs);
+        (keys.length > 0) ?
+            resolve(keys) :
+            reject(`Error while Parsing keys from Object`);
+    }, 2000, profiles2);
+}
+
+function profilePromiseFunction(resolve, reject) {
+    setTimeout((key, objs) => {
+        (objs.hasOwnProperty(key)) ?
+            resolve({ key, objs }) :
+            reject(`Object by name ${key} does not exist`)
+    }, 3000, 'kishan', profiles1);
+}
+function agePromiseFunction(resolve, reject) {
+    setTimeout((obj) => {
+        (obj.hasOwnProperty('age')) ?
+            resolve(obj) :
+            reject(`Property by name 'age' does not exist`);
+    }, 2000, profiles2['kishan']);
+}
+
+function hobbiesPromiseFunction(resolve, reject) {
+    setTimeout((obj) => {
+        (obj.hasOwnProperty('hobbies')) ?
+            resolve(obj) :
+            reject(`Property by name age does not exist`);
+    }, 4000, profiles2['kishan']);
+}
+
+function displayKeys(keys) {
+    //callback function fro resolve
+    console.log(keys);
+    return new Promise(profilePromiseFunction);
+}
+
+function displayProfile({ key, objs }) {
+    console.log(objs[key]);
+    return new Promise(agePromiseFunction);
+}
+
+function displayAge(obj) {
+    console.log(`Age of kishan is : ${obj['age']}`);
+    return new Promise(hobbiesPromiseFunction);
+}
+
+function displayHobbies(obj) {
+    console.log(`Hobbies of kishan are : ${obj['hobbies']}`);
+}
+
+function error(msg) {
+    //callback function for reject
+    console.log(msg);
+}
+
+goToHell.then(displayKeys)
+    .then(displayProfile)
+    .then(displayAge)
+    .then(displayHobbies)
+    .catch(error);
