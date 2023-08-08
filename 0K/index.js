@@ -265,6 +265,13 @@ function profilePromiseFunction(resolve, reject) {
             reject(`Object by name ${key} does not exist`)
     }, 3000, 'kishan', profiles1);
 }
+function agePromiseFunction(resolve, reject) {
+    setTimeout((obj) => {
+        (obj.hasOwnProperty('age')) ?
+            resolve(obj) :
+            reject(`Property by name 'age' does not exist`);
+    }, 2000, profiles1['kishan']);
+}
 
 function displayKeys(keys) {
     //callback function fro resolve
@@ -272,8 +279,13 @@ function displayKeys(keys) {
     return new Promise(profilePromiseFunction);
 }
 
-function displayProfile({key, objs}) {
+function displayProfile({ key, objs }) {
     console.log(objs[key]);
+    return new Promise(agePromiseFunction);
+}
+
+function displayAge(obj) {
+    console.log(`Age of kishan is : ${obj['age']}`);
 }
 
 function error(msg) {
@@ -281,5 +293,5 @@ function error(msg) {
     console.log(msg);
 }
 
-goToHell.then(displayKeys).then(displayProfile).catch(error);
+goToHell.then(displayKeys).then(displayProfile).then(displayAge).catch(error);
 
