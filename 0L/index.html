@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="info"> </div>
+
+    <center><button id="show" onclick="getData()">View</button></center>
+</body>
+<script>
+    function getData() {
+        let url = 'https://randomuser.me/api/'
+
+        function processData(response) {
+            console.log(response);
+            return response.json();
+        }
+        function printData(data) {
+            console.log(data);
+            let element = document.getElementById('info');
+            element.innerHTML = "<center><h1> Name: "
+                + data.results[0].name.first
+                + " " + data.results[0].name.last
+                + "</h2></center>";
+        }
+        function doSomething() {
+            console.log("If error occurs");
+        }
+        fetch(url).then(processData).then(printData).catch(doSomething);
+    }
+</script>
+</html>
