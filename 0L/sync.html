@@ -14,9 +14,9 @@
 </body>
 <script>
 
-    function processData(response) {
-        return response.json();
-    }
+    // function processData(response) {
+    //     return response.json();
+    // }
     function printData(data) {
         let fullname = data.results[0].name.first + " " + data.results[0].name.last;
         console.log(`Name of a random Person : ${fullname}`);
@@ -26,7 +26,7 @@
     // let dataObject = processData(res);
     // printData(dataObject);
 
-    fetch('https://randomuser.me/api/').then(processData).then(printData);
+    fetch('https://randomuser.me/api/').then(response => response.json()).then(printData);
 </script>
 
 </html>
