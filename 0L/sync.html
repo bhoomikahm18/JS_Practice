@@ -13,26 +13,20 @@
     <center><button id="show" onclick="getData()">View</button></center>
 </body>
 <script>
-    function getData() {
-        let url = 'https://randomuser.me/api/';
 
-        function fetchData() {
-            const response = fetch('https://randomuser.me/api/');
-            return response;
-        }
-
-        function processData(response) {
-            return response.json();
-        }
-        function printData(data) {
-            let fullname = data.results[0].name.first + " " + data.results[0].name.last;
-            console.log(`Name of a random Person : ${fullname}`);
-        }
-
+    function processData(response) {
+        return response.json();
     }
-    let res = fetchData();
-    let dataObject = processData(res);
-    printData(dataObject);
+    function printData(data) {
+        let fullname = data.results[0].name.first + " " + data.results[0].name.last;
+        console.log(`Name of a random Person : ${fullname}`);
+    }
+
+    // let res = fetchData();
+    // let dataObject = processData(res);
+    // printData(dataObject);
+
+    fetch('https://randomuser.me/api/').then(processData).then(printData);
 </script>
 
 </html>
