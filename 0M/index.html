@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,11 +26,13 @@
             font-size: 16px;
             transition-duration: 0.45s;
         }
-        button#red-pill:hover{
+
+        button#red-pill:hover {
             background-color: #ffffff;
             color: #e90000;
             border: 2px solid #e90000;
         }
+
         button#blue-pill {
             background-color: #304df7;
             border: 2px solid #304df7;
@@ -40,32 +43,39 @@
             font-size: 16px;
             transition-duration: 0.45s;
         }
-        button#blue-pill:hover{
+
+        button#blue-pill:hover {
             background-color: #ffffff;
             color: #304df7;
             border: 2px solid #304df7;
         }
     </style>
 </head>
+
 <body>
+    <h1 id="heading">Welcome To My Website</h1>
+
+    <button id="blue-pill">Click Me</button><br><br>
+    <button id="red-pill" onclick="changeText()">Click Me</button>
+
     <script>
         function sayHello() {
             alert("Hello User");
         }
 
         function changeText() {
+            // document.write("<h1> Hello</h1>") //Changes every thing in the html page.
             let h1Element = document.getElementById("heading");
             h1Element.innerHTML = "Welcome to The World of MATRIX";
 
             console.log(h1Element);
             console.log(h1Element.innerHTML);
         }
+
+        let buttonElement = document.getElementById("blue-pill");
+        buttonElement.addEventListener('click', sayHello)
     </script>
-    <h1 id="heading">Welcome To My Website</h1>
-
-    <button id="blue-pill" onclick="sayHello()">Click Me</button><br><br>
-    <button id="red-pill" onclick="changeText()">Click Me</button>
-
 
 </body>
+
 </html>
