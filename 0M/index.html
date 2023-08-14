@@ -52,10 +52,19 @@
         function sayHello() {
             alert("Hello User");
         }
+
+        function changeText() {
+            let h1Element = document.getElementById("heading");
+            h1Element.innerHTML = "Welcome to The World of MATRIX";
+
+            console.log(h1Element);
+            console.log(h1Element.innerHTML);
+        }
     </script>
     <h1 id="heading">Welcome To My Website</h1>
-    <button id="red-pill" onclick="sayHello()">Click Me</button><br><br>
-    <button id="blue-pill" onclick="sayHello()">Click Me</button>
+
+    <button id="blue-pill" onclick="sayHello()">Click Me</button><br><br>
+    <button id="red-pill" onclick="changeText()">Click Me</button>
 
 
 </body>
