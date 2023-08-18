@@ -24,3 +24,23 @@ let rabbit = {
     jumps: true,
     __proto__: animal
 };
+
+let longEar = {
+    earLength: 10,
+    __proto__: rabbit
+};
+
+let animal1 = {
+    eats: true,
+    walk() {
+       /*This method won't be used by rabbit*/
+    }
+};
+
+let rabbit1 = {
+    __proto__: animal
+};
+
+rabbit1.walk = function() {
+    alert("Rabbit! Bounce-bounce!");
+};
