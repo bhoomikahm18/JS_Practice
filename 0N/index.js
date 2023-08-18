@@ -72,3 +72,27 @@ undefined
 alert(user.fullName);
 undefined
 */
+
+let father = {
+    name: "Satish",
+    city: "Banavasi",
+    showInfo: function () {
+        console.log(`My Name is ${this.name} from ${this.city}`);
+    }
+}
+
+let son = {
+    name: "Shashank"
+}
+
+son.__proto__ = father;
+/*Output
+>father
+{name: 'Satish', city: 'Banavasi', showInfo: ƒ}
+>son
+{name: 'Shashank'}
+>father.showInfo();
+index.js:80 My Name is Satish from Banavasi
+>son.showInfo();
+index.js:80 My Name is Shashank from Banavasi
+*/
