@@ -96,3 +96,19 @@ index.js:80 My Name is Satish from Banavasi
 >son.showInfo();
 index.js:80 My Name is Shashank from Banavasi
 */
+
+//Object.keys() and for.in Loop
+let animal2 = {
+    eats: true
+};
+
+let rabbit2 = {
+    jumps: true,
+    __proto__: animal2
+};
+/*Output:
+>alert(Object.keys(rabbit2));
+undefined
+>for(let prop in rabbit2) alert(prop);
+undefined
+*/
