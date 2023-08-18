@@ -106,9 +106,32 @@ let rabbit2 = {
     jumps: true,
     __proto__: animal2
 };
+let cow = {
+
+};
 /*Output:
->alert(Object.keys(rabbit2));
+>alert(Object.keys(rabbit2)); //alert window
 undefined
->for(let prop in rabbit2) alert(prop);
+>for(let prop in rabbit2) alert(prop); //alert window
+undefined
+>for(let prop in cow) alert(prop);
 undefined
 */
+
+//Separating own and inherited Properties inside for.in
+let animal3 = {
+    eats: true
+};
+let rabbit3 = {
+    jumps: true,
+    __proto__: animal3
+};
+for(let prop in rabbit3) {
+    let isOwn = rabbit3.hasOwnProperty(prop);
+
+    if (isOwn) {
+        alert(`Our: ${prop}`);
+    }else {
+        alert(`Inherited: ${prop}`);
+    }
+}
