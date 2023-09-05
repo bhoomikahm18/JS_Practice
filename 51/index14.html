@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Search for the characters "LO" in the <b>end</b> of a word in the phrase:</p>
+<p>"HELLO, LOOK AT YOU!"</p>
+
+<p>Found in position: <span id="demo"></span></p>
+
+<script>
+let text = "HELLO, LOOK AT YOU!"; 
+let result = text.search(/LO\b/);
+document.getElementById("demo").innerHTML = result;
+</script>
+
+</body>
+</html>
