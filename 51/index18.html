@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Do a global search for a "1", followed by zero or one "0" characters:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "1, 100 or 1000?";
+let result = text.match(/10?/g);
+document.getElementById("demo").innerHTML = result;
+</script>
+
+</body>
+</html>
